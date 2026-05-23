@@ -26,7 +26,7 @@ export const authenticate = (
       process.env.JWT_SECRET as string,
     ) as JwtPayload;
 
-    req.user = decoded;
+    (req as any).user = decoded;
     next();
   } catch {
     sendError(res, StatusCodes.UNAUTHORIZED, "Invalid or expired token");
