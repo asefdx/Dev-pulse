@@ -1,5 +1,4 @@
-
-import { JwtPayload } from './index';
+import { JwtPayload } from "./index";
 
 declare global {
   namespace Express {
@@ -8,3 +7,5 @@ declare global {
     }
   }
 }
+
+export {};
